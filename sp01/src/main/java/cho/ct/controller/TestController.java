@@ -1,9 +1,15 @@
 package cho.ct.controller;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import cho.ct.domain.Human;
 import lombok.extern.java.Log;
 
 
@@ -35,5 +41,18 @@ public class TestController {
 	@RequestMapping(value="/form",method=RequestMethod.GET )
 	public String form() {
 		return "sample/form";
+	}
+	
+	@GetMapping("json1")
+	public ResponseEntity<String> m12(){
+		String msg = "{\"name\":슬기\",\"age\":24}"; //json
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "application/json;charset=utf-8");
+		return new ResponseEntity<String>(msg,headers,HttpStatus.OK);
+	}
+	
+	@GetMapping("json2")
+	public @ResponseBody Human m13() {
+		return new Human("진욱",27);
 	}
 }
