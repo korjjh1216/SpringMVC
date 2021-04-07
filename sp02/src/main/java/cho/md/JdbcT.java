@@ -1,4 +1,4 @@
-package cho.ct;
+package cho.md;
 import java.sql.*;
 
 class JdbcT 

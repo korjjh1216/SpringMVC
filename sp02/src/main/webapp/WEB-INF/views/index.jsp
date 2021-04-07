@@ -7,7 +7,7 @@
 <title>Sp01 index</title>
 </head>
 <body style="text-align:center">
-	<h1> Sp01 Index </h1>
+	<h1> Sp02 Index </h1>
 	
 	<p>
 		<a href="/test/">m01</a> <br/>
