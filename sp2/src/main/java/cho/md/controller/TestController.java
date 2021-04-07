@@ -1,4 +1,4 @@
-package cho.ct.controller;
+package cho.md.controller;
 
 import java.util.ArrayList;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import cho.ct.domain.Human;
-import cho.ct.domain.HumanList;
+import cho.md.domain.Human;
+import cho.md.domain.HumanList;
 import lombok.extern.java.Log;
 
 

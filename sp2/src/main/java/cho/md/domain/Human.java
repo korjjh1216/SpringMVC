@@ -1,4 +1,4 @@
-package cho.ct.domain;
+package cho.md.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
