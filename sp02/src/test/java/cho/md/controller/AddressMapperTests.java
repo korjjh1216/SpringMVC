@@ -25,15 +25,15 @@ public class AddressMapperTests {
 //		log.info("AddressMapperTests testList()" + addressMapper.list());
 //	}
 //	@Test
-//	public void testList() {
-//		Address address = new Address(-1,"힘든","셋팅",null);
+//	public void testInsert() {
+//		Address address = new Address(-1,"�옒�뱺","�뀑�똿",null);
 //		addressMapper.insert(address);
-//		log.info("##insert() 수행완료");
+//		log.info("##insert() �닔�뻾�셿猷�");
 //	}
 	@Test
 	public void testDelete() {
 		long seq = 12L;
 		addressMapper.delete(seq);
-		log.info("##delete() 수행완료");
+		log.info("##delete() �닔�뻾�셿猷�");
 	}
 }

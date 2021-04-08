@@ -27,7 +27,8 @@
 		<property name="configLocation"
 			 value="classpath:/mybatis-config.xml"/>
 	</bean>
-	
+	<context:component-scan base-package="cho.md.dao"/>
 	<context:component-scan base-package="cho.md.mapper"/>
 	<mybatis-spring:scan base-package="cho.md.mapper"/>
+	<context:component-scan base-package="cho.md.service"/>
 </beans>
