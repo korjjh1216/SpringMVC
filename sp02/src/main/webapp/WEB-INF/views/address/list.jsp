@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=utf-8" 
-         import="java.util.*, cho.md.domain.Address"%>
+         import="java.util.*,cho.md.domain.Address"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
