@@ -5,8 +5,10 @@
 <configuration>
    <typeAliases>
    	  <typeAlias alias="Board" type="cho.md.domain.Board"/>
+   	  <typeAlias alias="Address" type="cho.md.domain.Address"/>
    </typeAliases>
    <mappers>
    	  <mapper resource="cho/md/mapper/BoardMapper.xml"/>
+   	  <mapper resource="cho/md/mapper/AddressMapper.xml"/>
    </mappers>
 </configuration>

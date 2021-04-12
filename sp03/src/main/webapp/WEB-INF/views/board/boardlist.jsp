@@ -1,6 +1,6 @@
-<%@ page contentType="text/html;charset=utf-8" 
-         import="java.util.*, cho.md.domain.Board"%>
-<meta charset="utf-8">
+<%@ page contentType="text/html;charset=utf-8" import="java.util.*, cho.md.domain.Board"  pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +10,7 @@
 		a{text-decoration:none}
 	</style>
 </head>
+
 <body>
 <center>
 <font color='gray' size='4' face='휴먼편지체'>
@@ -20,6 +21,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='write.do'>글쓰기</a><br/>
 </font>
+
 <hr width='600' size='2' color='gray' noshade>
 
 <TABLE border='2' width='600' align='center' noshade>
@@ -45,29 +47,6 @@
 		<TD>2018-12-14</TD>
 	   </TR> 
 
-    <TR align='center' noshade>
-		<TD>16</TD>
-		<TD>박참15</TD>
-		<TD>chm@hanmail.net</TD>
-	    <TD>
-	      <a href="content.do?seq=16">
-		    제목15
-		  </a>
-		</TD>
-		<TD>2018-12-14</TD>
-	   </TR> 
-
-    <TR align='center' noshade>
-		<TD>15</TD>
-		<TD>오현화14</TD>
-		<TD>oh@hanmail.net</TD>
-	    <TD>
-	      <a href="content.do?seq=15">
-		    제목14
-		  </a>
-		</TD>
-		<TD>2018-12-14</TD>
-	   </TR> 
        
       
 </TABLE>

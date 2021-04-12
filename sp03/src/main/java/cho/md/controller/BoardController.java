@@ -26,12 +26,12 @@ public class BoardController {
 		
 		return mv;
 	}
-	//폼으로 이동
+	
 	@GetMapping("/write.do")
 	public String write() {
 		return "address/write";
 	}
-	//데이터베이스를 집어넣는거다.
+	
 	@PostMapping("/write.do")
 	public String writeOk(Board address) {
 		BoardService.insertS(address);

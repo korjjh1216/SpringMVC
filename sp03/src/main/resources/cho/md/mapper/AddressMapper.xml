@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cho.md.mapper.AddressMapper">
+	<select id="list" resultType="Address">
+	    select * from ADDRESS order by SEQ desc
+	</select>
+	<insert id="insert" parameterType="Address">
+		insert into ADDRESS(name, addr, rdate) values(#{name}, #{addr}, now())
+	</insert>
+	<delete id="delete" parameterType="long">
+	    delete from ADDRESS where SEQ=#{seq}
+	</delete>
+	<insert id="insertfile" parameterType="Address">
+		insert into ADDRESS_FILE(ofname, sfname, fsize) values(#{ofname}, #{sfname}, #{fsize})
+	</insert>
+</mapper>
