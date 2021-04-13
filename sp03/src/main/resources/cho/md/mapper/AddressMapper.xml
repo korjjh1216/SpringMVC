@@ -6,13 +6,22 @@
 	<select id="list" resultType="Address">
 	    select * from ADDRESS order by SEQ desc
 	</select>
-	<insert id="insert" parameterType="Address">
-		insert into ADDRESS(name, addr, rdate) values(#{name}, #{addr}, now())
-	</insert>
-	<delete id="delete" parameterType="long">
+	
+	<delete id="delete" parameterType="Long">
 	    delete from ADDRESS where SEQ=#{seq}
 	</delete>
-	<insert id="insertfile" parameterType="Address">
-		insert into ADDRESS_FILE(ofname, sfname, fsize) values(#{ofname}, #{sfname}, #{fsize})
+	<select id="FileListForRemove" parameterType="long" resultType="AddressFile">
+	    select * from ADDRESS_File where SEQ=#{seq}
+	</select>
+	
+	<insert id="insertSelectKey" parameterType="Address" >
+	 	<selectKey keyProperty="seq" order="BEFORE" resultType="Long">
+	 		select ifnull(max(seq)+1,1) from ADDRESS
+	 	</selectKey>
+		insert into ADDRESS(seq, name, addr, rdate) values(#{seq}, #{name}, #{addr}, now())
+	</insert>
+	<insert id="insertFile" parameterType="AddressFile">
+		insert into ADDRESS_File(ofname,sfname,fsize,seq) values( #{ofname}, #{sfname}, #{fsize}, #{seq})
 	</insert>
 </mapper>
+

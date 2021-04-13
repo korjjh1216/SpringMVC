@@ -12,6 +12,5 @@ public class AddressFile {
 	 private String ofname;
 	 private String sfname;
 	 private long fsize;
-	 
 	 private long seq;
 }
